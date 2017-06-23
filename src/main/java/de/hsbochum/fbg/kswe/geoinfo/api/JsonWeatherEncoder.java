@@ -23,7 +23,8 @@ public class JsonWeatherEncoder {
         ObjectNode tempNode = mapper.createObjectNode();
         tempNode.put("value", obj.getTemp());
         tempNode.put("unit", "C");
-        weatherNode.set("temperatur", tempNode);
+        weatherNode.set("temperature", tempNode);
+        node.set("phenomena", weatherNode);
         
         return node.toString();
     }
